@@ -149,4 +149,57 @@ a:hover {
   width: 20px;
   height: 20px;
   fill: var(--accent-color);
+}
+
+/* Add media query for mobile devices */
+@media screen and (max-width: 768px) {
+  .home-grid {
+    grid-template-columns: 1fr; /* Stack columns on mobile */
+  }
+
+  .container {
+    padding-top: calc(var(--spacing) * 3); /* Add more padding for navbar */
+    align-items: flex-start; /* Align content to top on mobile */
+  }
+
+  .profile-section {
+    padding-right: 0; /* Remove right padding on mobile */
+    text-align: center; /* Center all text in profile section */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center headshot and content */
+  }
+
+  .profile-section img {
+    max-width: 150px; /* Make headshot even smaller */
+    height: auto;
+    margin-bottom: var(--spacing);
+  }
+
+  .profile-section h2 {
+    margin-top: 0.5rem; /* Add some space between image and heading */
+  }
+
+  .profile-section p {
+    text-align: left; /* Keep paragraph text left-aligned for readability */
+    width: 100%; /* Ensure paragraph takes full width */
+  }
+
+  /* Adjust navbar for mobile */
+  .navbar {
+    padding: calc(var(--spacing) / 2);
+  }
+
+  .navbar-title {
+    font-size: 1rem;
+  }
+
+  .social-links {
+    gap: 1rem;
+  }
+
+  .social-links svg {
+    width: 18px;
+    height: 18px;
+  }
 } 
