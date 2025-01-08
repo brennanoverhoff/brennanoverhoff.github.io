@@ -18,7 +18,23 @@ body {
   line-height: 1.6;
   padding: var(--spacing);
   height: 100vh;
-  overflow: hidden;
+  overflow: hidden; /* Hidden by default for desktop */
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    height: auto; /* Allow content to determine height */
+    overflow: visible; /* Enable scrolling on mobile */
+  }
+
+  .container {
+    min-height: auto; /* Remove fixed height constraint */
+  }
+
+  .articles-section {
+    max-height: none; /* Remove height restriction */
+    overflow-y: visible; /* Show all content */
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
