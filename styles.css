@@ -98,6 +98,10 @@ a:hover {
   border-bottom: 1px solid #ddd;
 }
 
+.article-preview:last-of-type {
+  margin-bottom: 3rem;
+}
+
 .article-date {
   font-size: 0.9rem;
   color: var(--accent-color);
@@ -218,4 +222,86 @@ a:hover {
     width: 18px;
     height: 18px;
   }
-} 
+}
+
+/* CV Section Styles */
+.cv-section {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+}
+
+.cv-category {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.cv-category h3 {
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  color: var(--accent-color);
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+.cv-category ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.cv-category li {
+  margin-bottom: 0.4rem;
+  position: relative;
+  font-size: 0.9rem;
+  padding-left: 1.2rem;
+}
+
+.cv-category li:before {
+  content: "•";
+  position: absolute;
+  left: 0.3rem;
+  color: var(--accent-color);
+}
+
+@media screen and (max-width: 768px) {
+  .cv-section {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .cv-category {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+  }
+
+  .cv-category:last-child {
+    border-bottom: none;
+  }
+
+  .cv-category h3 {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+}
+
+.articles-section h2 {
+  margin-bottom: 1rem;
+}
+
+.articles-section h2 + .cv-section {
+  margin-top: 3rem;
+}
+
+.profile-section p {
+  margin-bottom: 1rem;
+}
+
+.profile-section .location-text {
+  font-size: 0.9rem;
+  color: var(--accent-color);
+  margin-top: -0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Remove email-specific styles since we're using social links styles */ 
