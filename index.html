@@ -55,32 +55,30 @@
                 <p>
                     Originally from Buffalo, NY.
                 </p>
-                <p>Probably in Boston/SF.</p>
             </section>
             
             <section class="articles-section">
-                <p>I broadly work on making biological systems more programmable. This started with an interest in polypharmacology, where I trained large chemistry models to design tool compounds that promote stress resilience in cell therapy manufacturing contexts. I’ve also spent time making AI useful in more traditional biotech applications across oncology, substance abuse disorders, and neurodegeneration. Now, I work on reasoning models to help underwrite therapeutics bets with the highest transformational potential. </p>
+                <p>I am captivated by how biology shows us that matter can be made programmable. I took this lens seriously first as a way to work on addiction, a pathology that starts with a disequilibrated brain, and often cascades into chronic degeneration in the rest of the body. I built systems—like compilers for biochemical machine code—to design molecules that extinguish substance cravings in animal models<a class="ref" href="#ref-1" data-ref="1">1</a>, then make cells more stress-resilient to eventually create regenerative therapies<a class="ref" href="#ref-2" data-ref="2">2</a>. I then realized clinical infrastructure would bottleneck the rate at which therapeutic ideas like these could be tested, so I worked on LMs to help underwrite new drug trials<a class="ref" href="#ref-3" data-ref="3">3</a>. Now, I’m working on a more general blueprint for cures, and using biotech markets to scale their deployment and access feedback<a class="ref" href="#ref-4" data-ref="4">4</a>.</p>
                 <p><br></p>
                 <div class="cv-writing-grid">
                     <div class="cv-column">
                         <h2>tl;dr cv</h2>
-                        <p class="harvard-line">currently building. prev:</p>
+                        <p class="harvard-line"><span class="ref-target" id="ref-4" data-ref="4">currently building</span>. prev:</p>
                         <ul class="cv-list">
                             <li>applied math @ Harvard</li>
-                            <li><a href="https://www.fiercebiotech.com/medtech/fine-tuned-ai-models-openai-babylon-aim-predict-clinical-trial-successes" target="_blank">Babylon Bio</a>, Permanence Bio</li>
-                            <li>Samudrala lab → <a href="https://meditati.us/" target="_blank">OUD spinout</a></li>
-                            <li><a href="https://medicine.buffalo.edu/news_and_events/news/2023/02/samudrala-grand-champion-16009.html" target="_blank">ASPIRE</a>, Gladyshev lab</li>
-                            <li>Z Fellow</li>
+                            <li><span class="ref-target" id="ref-1" data-ref="1">Samudrala lab, <a href="https://medicine.buffalo.edu/news_and_events/news/2023/02/samudrala-grand-champion-16009.html" target="_blank">ASPIRE</a></span></li>
+                            <li><span class="ref-target" id="ref-2" data-ref="2">partnered stealth co backed by Allston Venture Fund, Z Fellows</span></li>
+                            <li><span class="ref-target" id="ref-3" data-ref="3">Babylon Bio, during OpenAI partnership</span></li>
                             <li>Alzheimer's Association</li>
                         </ul>
                     </div>
                     <div class="writing-column">
                         <h2 class="writing-header">writing</h2>
-                        <article class="article-preview">
+                        <article class="article-preview ref-target" data-ref="3">
                             <span class="article-date">Jan 15, 2025</span>
                             <h3><a href="https://brennanoverhoff.substack.com/p/why-did-azelaprag-fail?r=4gp2gy">Why did Azelaprag fail?</a></h3>
                         </article>
-                        <article class="article-preview">
+                        <article class="article-preview ref-target" data-ref="3">
                             <span class="article-date">Jan 4, 2025</span>
                             <h3><a href="https://norn.group/writing/how-to-design-a-clinical-trial-for-aging">How to design a clinical trial for aging</a></h3>
                         </article>
@@ -109,5 +107,22 @@
             </section>
         </div>
     </div>
+
+    <script>
+      (function () {
+        const refs = document.querySelectorAll('.ref');
+        const targets = document.querySelectorAll('.ref-target');
+        const setActive = (n, on) => {
+          refs.forEach(r => { if (r.dataset.ref === n) r.classList.toggle('is-active', on); });
+          targets.forEach(t => { if (t.dataset.ref === n) t.classList.toggle('is-active', on); });
+        };
+        refs.forEach(r => {
+          const n = r.dataset.ref;
+          r.addEventListener('mouseenter', () => setActive(n, true));
+          r.addEventListener('mouseleave', () => setActive(n, false));
+          r.addEventListener('click', () => setActive(n, true));
+        });
+      })();
+    </script>
 </body>
 </html> 
