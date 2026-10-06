@@ -58,71 +58,38 @@
             </section>
             
             <section class="articles-section">
-                <p>I am captivated by how biology shows us that matter can be made programmable. I took this lens seriously first as a way to work on substance addiction, a pathology that starts with a disequilibrated brain, and often cascades into toxin-induced degeneration through the rest of the body. I built systems—like compilers for biochemical machine code—to design molecules that extinguish substance cravings in animal models<a class="ref" href="#ref-1" data-ref="1">1</a>, then make cells more stress-resilient to eventually create regenerative therapies<a class="ref" href="#ref-2" data-ref="2">2</a>. I then realized clinical infrastructure would bottleneck the rate at which therapeutic ideas like these could be tested, so I worked on LMs to help underwrite new drug trials<a class="ref" href="#ref-3" data-ref="3">3</a>. Now, I’m working on a more general blueprint for cures, and using biotech markets to scale their deployment and access feedback<a class="ref" href="#ref-4" data-ref="4">4</a>.</p>
-                <p><br></p>
+                <h2 class="musings-header">musings</h2>
+                <ul class="musings-list">
+                    <li>Eukaryotic cytoplasm may be the most interesting material substance we know of. We take for granted that you can program the same primitive stuff to assume 3D form, change its material properties, sense the environment, run computation, manufacture materials, store energy, host consciousness.</li>
+                    <li>Many of my early career bets have involved some form of: embedding cytoplasmic structure in models &rarr; writing "programs" with atoms/genes/clinical strategy &rarr; deploying into biotech.</li>
+                    <li>A few things I'm curious about now: clinical scaling laws, whole blood banking, RL environments for iPSC manipulation.</li>
+                </ul>
                 <div class="cv-writing-grid">
                     <div class="cv-column">
-                        <h2>tl;dr cv</h2>
-                        <p class="harvard-line"><span class="ref-target" id="ref-4" data-ref="4">currently building</span>. prev:</p>
-                        <ul class="cv-list">
-                            <li>applied math @ Harvard</li>
-                            <li><span class="ref-target" id="ref-1" data-ref="1">Samudrala lab, <a href="https://medicine.buffalo.edu/news_and_events/news/2023/02/samudrala-grand-champion-16009.html" target="_blank">ASPIRE</a></span></li>
-                            <li><span class="ref-target" id="ref-2" data-ref="2">partnered stealth co backed by Allston Venture Fund, Z Fellows</span></li>
-                            <li><span class="ref-target" id="ref-3" data-ref="3">Babylon Bio, during OpenAI partnership</span></li>
-                            <li>Alzheimer's Association</li>
+                        <h2>curriculum vitae</h2>
+                        <ul class="cv-list cv-arcs">
+                            <li><span class="arc-numeral">I</span> Extinguishing substance cravings via large pharmacology models. w/ <a href="https://medicine.buffalo.edu/news_and_events/news/2023/02/samudrala-grand-champion-16009.html" target="_blank">UB</a>, Purdue, MIT.</li>
+                            <li><span class="arc-numeral">II</span> Protocols for rejuvenating cells. From my undergrad dorm, w/ HMS, numerous industry labs.</li>
+                            <li><span class="arc-numeral">III</span> LLMs for Alzheimer&rsquo;s clinical strategy. w/ <a href="https://www.fiercebiotech.com/medtech/fine-tuned-ai-models-openai-babylon-aim-predict-clinical-trial-successes" target="_blank">Babylon, OpenAI</a>.</li>
                         </ul>
+                        <p class="cv-footnotes">Footnote: I studied applied math at Harvard, and I&rsquo;m a Z Fellow.</p>
                     </div>
                     <div class="writing-column">
                         <h2 class="writing-header">writing</h2>
-                        <article class="article-preview ref-target" data-ref="3">
+                        <article class="article-preview">
                             <span class="article-date">Jan 15, 2025</span>
                             <h3><a href="https://brennanoverhoff.substack.com/p/why-did-azelaprag-fail?r=4gp2gy">Why did Azelaprag fail?</a></h3>
                         </article>
-                        <article class="article-preview ref-target" data-ref="3">
+                        <article class="article-preview">
                             <span class="article-date">Jan 4, 2025</span>
                             <h3><a href="https://norn.group/writing/how-to-design-a-clinical-trial-for-aging">How to design a clinical trial for aging</a></h3>
                         </article>
                     </div>
                 </div>
-                <!--
-                <article class="article-preview">
-                    <span class="article-date">Jan 15, 2025</span>
-                    <h3><a href="blog/article-2.html">Retrospective: Can drug promiscuity actually be feature instead of a bug?</a></h3>
-
-                </article>
-
-                <article class="article-preview">
-                    <span class="article-date">Jan 20, 2025</span>
-                    <h3><a href="blog/article-2.html">A necessary bet on pleiotropy: why we need this for a longevity drug</a></h3>
-                </article>
-
-                <article class="article-preview">
-                    <span class="article-date">Jan 8, 2025</span>
-                    <h3><a href="blog/article-1.html">Why Azelaprag failed</a></h3>
-                </article>
-                -->
-
-                
-                <!-- Add more article previews as needed -->
+                <p class="company-line">Now building systems to find transformative medicines.</p>
             </section>
         </div>
     </div>
 
-    <script>
-      (function () {
-        const refs = document.querySelectorAll('.ref');
-        const targets = document.querySelectorAll('.ref-target');
-        const setActive = (n, on) => {
-          refs.forEach(r => { if (r.dataset.ref === n) r.classList.toggle('is-active', on); });
-          targets.forEach(t => { if (t.dataset.ref === n) t.classList.toggle('is-active', on); });
-        };
-        refs.forEach(r => {
-          const n = r.dataset.ref;
-          r.addEventListener('mouseenter', () => setActive(n, true));
-          r.addEventListener('mouseleave', () => setActive(n, false));
-          r.addEventListener('click', () => setActive(n, true));
-        });
-      })();
-    </script>
 </body>
 </html> 

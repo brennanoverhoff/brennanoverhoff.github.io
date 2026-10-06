@@ -229,7 +229,6 @@ a:hover {
 
   .cv-writing-grid {
     grid-template-columns: 1fr;
-    gap: 1rem;
   }
 }
 
@@ -243,7 +242,7 @@ a:hover {
 }
 
 .cv-list li:before {
-  content: "-";
+  content: "\2022";
   position: absolute;
   left: 0;
   color: var(--accent-color);
@@ -254,20 +253,13 @@ a:hover {
   font-size: 1rem;
 }
 
-.articles-section h2:first-of-type {
-  font-size: 1.1rem;
-}
-
-.harvard-line {
-  font-size: 0.85rem;
-  margin-bottom: 0.4rem;
-  margin-top: 0;
-}
-
 .cv-writing-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  /* Collapses to a single column once the section itself gets narrow,
+     independent of viewport width. */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  column-gap: 2rem;
+  row-gap: 1.25rem;
   margin-top: 0;
 }
 
@@ -307,7 +299,7 @@ a:hover {
 }
 
 .manifesto-list li:before {
-  content: "-";
+  content: "\2022";
   position: absolute;
   left: 0;
 }
@@ -315,6 +307,64 @@ a:hover {
 .writing-header {
   margin-top: 0;
   margin-bottom: 0.4rem;
+}
+
+/* Musings */
+.musings-header {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+}
+
+.musings-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 1.6rem;
+}
+
+.musings-list li {
+  margin-bottom: 0.55rem;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.musings-list li:last-child {
+  margin-bottom: 0;
+}
+
+.musings-list li:before {
+  content: "\2022";
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+}
+
+/* CV arcs */
+.cv-arcs li {
+  margin-bottom: 0.4rem;
+  padding-left: 1.6rem;
+}
+
+.cv-arcs li:before {
+  content: none;
+}
+
+.arc-numeral {
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+}
+
+.cv-footnotes {
+  font-size: 0.75rem;
+  margin-top: 0.6rem;
+  margin-bottom: 0;
+}
+
+/* Full-width line beneath the cv / writing columns */
+.company-line {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(45, 45, 45, 0.15);
   font-size: 0.85rem;
 }
 
@@ -357,37 +407,4 @@ a:hover {
 
 /* Remove email-specific styles since we're using social links styles */
 
-/* Inline reference markers */
-.ref {
-  font-size: 0.68em;
-  vertical-align: super;
-  line-height: 0;
-  margin-left: 0.12em;
-  border-bottom: none;
-  color: var(--text-color);
-  opacity: 1;
-  cursor: pointer;
-}
-
-.ref-target {
-  border-radius: 2px;
-  box-shadow: 0 0 0 0 rgba(45, 45, 45, 0);
-  transition: box-shadow 0.15s ease, background-color 0.15s ease;
-}
-
-.ref-target.is-active {
-  background-color: rgba(45, 45, 45, 0.06);
-  box-shadow: 0 0 0 3px rgba(45, 45, 45, 0.06);
-}
-
-/* Block-level targets: keep the halos from touching */
-.article-preview.ref-target {
-  margin: 0.35rem 0;
-  padding-left: 0.35rem;
-  padding-right: 0.35rem;
-  margin-left: -0.35rem;
-}
-
-.article-preview.ref-target.is-active {
-  box-shadow: none;
-} 
+ 
