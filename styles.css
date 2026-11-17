@@ -309,33 +309,10 @@ a:hover {
   margin-bottom: 0.4rem;
 }
 
-/* Musings */
-.musings-header {
+/* Intro */
+.intro-line {
   margin-top: 0;
-  margin-bottom: 0.4rem;
-}
-
-.musings-list {
-  list-style-type: none;
-  padding-left: 0;
   margin-bottom: 1.6rem;
-}
-
-.musings-list li {
-  margin-bottom: 0.55rem;
-  padding-left: 1.2rem;
-  position: relative;
-}
-
-.musings-list li:last-child {
-  margin-bottom: 0;
-}
-
-.musings-list li:before {
-  content: "\2022";
-  position: absolute;
-  left: 0;
-  color: var(--accent-color);
 }
 
 /* CV arcs */
@@ -358,14 +335,6 @@ a:hover {
   font-size: 0.75rem;
   margin-top: 0.6rem;
   margin-bottom: 0;
-}
-
-/* Full-width line beneath the cv / writing columns */
-.company-line {
-  margin-top: 1.5rem;
-  padding-top: 1rem;
-  border-top: 1px solid rgba(45, 45, 45, 0.15);
-  font-size: 0.85rem;
 }
 
 .articles-section .writing-header + .article-preview {
